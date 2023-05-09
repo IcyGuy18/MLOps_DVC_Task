@@ -12,7 +12,7 @@ jobs:
                   GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
               run: |
                   make install 
-                  dvc remote modify myremote gdrive_use_service_account true
+                  dvc remote modify drive gdrive_use_service_account true
                   dvc pull data.csv
                   dvc repro
                   git fetch --prune
